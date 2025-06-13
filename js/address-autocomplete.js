@@ -20,10 +20,11 @@
         };
 
         let debounceTimer;
+        let suggestions;
         input.addEventListener("input", function () {
             clearTimeout(debounceTimer);
             // Create suggestion list
-            const suggestions = document.createElement("ul");
+            suggestions = document.createElement("ul");
             suggestions.className = "suggestions";
 
             // Insert suggestions right after the input field
