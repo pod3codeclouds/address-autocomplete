@@ -61,9 +61,8 @@
                             suggestions.innerHTML = "";
 
                             if(inputName === 'billingAddress1' || inputName === 'billingZip'){
-                                document.getElementsByName("billingAddress1")[0].value =
-(address.house_number ? address.house_number + " " : "") +
-(address.road || address.village || address.beach || address.pedestrian || address.path || "");
+                                document.getElementsByName("billingAddress1")[0].value = (address.house_number ? address.house_number + " " : "") +
+(address.road || address.village || address.beach || address.pedestrian || address.path || address.protected_area || "");
 
                                 document.getElementsByName("billingCity")[0].value =
                                 address.city || address.county || address.town || address.village || "";
@@ -77,7 +76,7 @@
                             }
 
                             if(inputName === 'shippingAddress1' || inputName === 'shippingZip'){
-                                document.getElementsByName("shippingAddress1")[0].value = (address.house_number ? address.house_number + " " : "") + (address.road || address.village || address.beach || address.pedestrian || address.path || "");
+                                document.getElementsByName("shippingAddress1")[0].value = (address.house_number ? address.house_number + " " : "") + (address.road || address.village || address.beach || address.pedestrian || address.path || address.protected_area || "");
                                 document.getElementsByName("shippingCity")[0].value = address.city || address.county || address.town || address.village || "";
 
                                 const fullState = address.state || '';
