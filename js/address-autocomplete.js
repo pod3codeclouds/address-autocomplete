@@ -2,6 +2,12 @@
     global.AddressAutocomplete =function setupAutocomplete(inputName) {
         const input = document.getElementsByName(inputName)[0];
         if (!input) return;
+        // Create suggestion list
+        suggestions = document.createElement("ul");
+        suggestions.className = "suggestions";
+
+        // Insert suggestions right after the input field
+        input.parentNode.insertBefore(suggestions, input.nextSibling);
         
         const stateAbbreviations = {
             "Alabama": "AL", "Alaska": "AK", "Arizona": "AZ", "Arkansas": "AR",
@@ -23,13 +29,6 @@
         let suggestions;
         input.addEventListener("input", function () {
             clearTimeout(debounceTimer);
-            // Create suggestion list
-            suggestions = document.createElement("ul");
-            suggestions.className = "suggestions";
-
-            // Insert suggestions right after the input field
-            input.parentNode.insertBefore(suggestions, input.nextSibling);
-
             const query = input.value.trim();
             if (query.length < 2) {
                 suggestions.innerHTML = "";
