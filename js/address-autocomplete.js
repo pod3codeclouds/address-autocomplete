@@ -3,7 +3,7 @@
         const input = document.getElementsByName(inputName)[0];
         if (!input) return;
         // Create suggestion list
-        suggestions = document.createElement("ul");
+        let suggestions = document.createElement("ul");
         suggestions.className = "suggestions";
 
         // Insert suggestions right after the input field
@@ -26,7 +26,7 @@
         };
 
         let debounceTimer;
-        let suggestions;
+        
         input.addEventListener("input", function () {
             clearTimeout(debounceTimer);
             const query = input.value.trim();
