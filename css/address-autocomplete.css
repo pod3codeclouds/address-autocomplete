@@ -1,19 +1,19 @@
 ul.suggestions {
-    border: 1px solid #ccc;
-    padding: 0;
-    margin: 0;
+    position:relative;
     list-style: none;
+    margin: 0;
+    padding: 0;
     background: white;
-    z-index: 1000;
     max-height: 200px;
-    overflow-y: auto;
+    overflow-y:auto;
+    z-index: 1000;
 }
-
 ul.suggestions li {
     padding: 10px;
+    border: 1px solid #eee;
     cursor: pointer;
+    transition: background 0.2s ease;
 }
-
 ul.suggestions li:hover {
-    background-color: #eee;
+    background: #eee;
 }
