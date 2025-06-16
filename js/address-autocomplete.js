@@ -25,7 +25,7 @@
             "Wisconsin": "WI", "Wyoming": "WY"
         };
 
-        const stateCodesFR = {
+        const stateCodeFR = {
               "Ain": "01", "Aisne": "02", "Allier": "03", "Alpes-de-Haute-Provence": "04", "Hautes-Alpes": "05",
               "Alpes-Maritimes": "06", "Ardèche": "07", "Ardennes": "08", "Ariège": "09", "Aube": "10",
               "Aude": "11", "Aveyron": "12", "Bouches-du-Rhône": "13", "Calvados": "14", "Cantal": "15",
