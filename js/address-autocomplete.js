@@ -1,5 +1,5 @@
 (function(global){
-    global.AddressAutocomplete =function setupAutocomplete(inputName,country) {
+    global.AddressAutocomplete =function setupAutocomplete(inputName,country="US") {
         const input = document.getElementsByName(inputName)[0];
         if (!input) return;
         // Create suggestion list
