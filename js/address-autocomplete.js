@@ -64,7 +64,7 @@
             // https://photon.komoot.io/api/?q=${encodeURIComponent(query)}&limit=5
 
             debounceTimer = setTimeout(()=>{
-                fetch(`https://nominatim.openstreetmap.org/search?format=json&countrycodes=US&q=${encodeURIComponent(query)}&addressdetails=1`)
+                fetch(`https://nominatim.openstreetmap.org/search?format=json&countrycodes=${country}&q=${encodeURIComponent(query)}&addressdetails=1`)
     
                 .then(res => res.json())
                 .then(data => {
